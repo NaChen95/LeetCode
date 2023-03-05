@@ -1,5 +1,5 @@
 
-# -------------------  归并排序原地修改  -------------------
+# -------------------  解法一：归并排序原地修改  -------------------
 # 空间复杂度为 O(N)，因为 tmp 数组最大为 O(n)。栈帧空间为 O(lgn) https://leetcode.cn/circle/article/zeM9YK/
 def merge_sort(nums, left, right): # 原地修改，[left, right]
 
@@ -30,7 +30,7 @@ class Solution:
         merge_sort(nums, 0, len(nums) - 1)
         return nums
 
-# -------------------  归并排序非原地修改  -------------------
+# -------------------  解法二：归并排序非原地修改  -------------------
 # 空间复杂度应该也是 O(n)
 class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
@@ -55,4 +55,4 @@ class Solution:
         if j >= len2: tmp[k:] = nums1[i:]
         return tmp
 
-# ------------------- TODO 快速排序  -------------------
+# ------------------- TODO 解法三：快速排序  -------------------

@@ -1,5 +1,5 @@
 
-# -------------------  错误解法  -------------------
+# -------------------  解法一：错误解法  -------------------
 class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
         if not intervals:
@@ -11,7 +11,7 @@ class Solution:
             res.append(intervals[i])
             i += 1
         print("res1:", res)
-        left, right = float("inf"), float("-inf")
+        left, right = float("inf"), float("-inf") # 注意 Python3 里面正负无穷大的做法
         while i < n and newInterval[1] >= intervals[i][0]:
             left = min(left, intervals[i][0], newInterval[0])
             right = max(right, intervals[i][1], newInterval[1])
@@ -25,7 +25,7 @@ class Solution:
         print("res3:", res)
         return res
         
-# -------------------  正确解法  -------------------
+# -------------------  解法二：正确解法  -------------------
 # https://leetcode.cn/problems/insert-interval/solutions/472435/shou-hua-tu-jie-57-cha-ru-qu-jian-fen-cheng-3ge-ji/
 
 class Solution:
